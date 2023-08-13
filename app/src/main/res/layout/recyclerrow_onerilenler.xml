@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+
+
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/onerilenler_constraintLayout"
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:paddingBottom="15dp"
+        android:elevation="15dp"
+        android:orientation="vertical"
+        android:background="@drawable/radius_bildirimler"
+        android:backgroundTint="@color/twitter_background_los"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints">
+
+
+        <ImageView
+            android:id="@+id/onerilenler_image"
+            android:layout_width="280dp"
+            android:layout_height="160dp"
+            android:layout_marginTop="-2dp"
+            android:paddingHorizontal="-2dp"
+            android:scaleType="fitXY"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/u"
+            android:layout_width="280dp"
+            android:layout_height="35dp"
+            android:background="#70000000"
+            app:layout_constraintBottom_toBottomOf="@+id/onerilenler_image"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/onerilenler_constraintLayout"
+            tools:ignore="MissingConstraints">
+
+            <TextView
+                android:id="@+id/onerilenler_textview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text=""
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:textStyle="italic"
+
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <Button
+            android:id="@+id/recyclerrow_oneriler_button"
+            android:layout_weight="0.5"
+            style="@android:style/Widget.Button"
+            android:layout_width="260dp"
+            android:layout_height="33dp"
+            android:layout_marginTop="25dp"
+            android:background="@drawable/purple_background_browse"
+            android:onClick="düzenle"
+            android:text=""
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:paddingStart="85dp"
+            android:drawablePadding="-100dp"
+            android:drawableStart="@drawable/browse"
+            android:textColor="@color/white"
+            android:textSize="9sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/onerilenler_image"
+            tools:ignore="MissingConstraints"></Button>
+
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

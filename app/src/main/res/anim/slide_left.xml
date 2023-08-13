@@ -1,0 +1,13 @@
+<set xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:duration="800"
+    android:interpolator="@android:interpolator/fast_out_extra_slow_in"
+    tools:ignore="NewApi">
+
+    <translate
+        android:fromXDelta="100%p"
+        android:toXDelta="0"
+        android:duration="400"
+        />
+
+</set>

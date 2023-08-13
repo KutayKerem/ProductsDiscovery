@@ -1,0 +1,492 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    android:id="@+id/my_profile_view"
+    style="@style/SCREEN"
+    tools:context="com.app.kutaykerem.productdiscovery.Pages.KullaniciProfileFragment">
+
+    <LinearLayout
+        android:id="@+id/kullaniciProfileProgressBar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:visibility="gone"
+        android:orientation="vertical">
+
+    <ProgressBar
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:indeterminate="true"
+        android:indeterminateTint="@color/secilenAcikRenk"
+        android:progress="100"
+        android:layout_gravity="center"
+        android:indeterminateDuration="100" />
+
+    </LinearLayout>
+
+
+
+    <TextView
+        android:id="@+id/profile_profileText"
+        style="@style/TEXT"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="15dp"
+        android:text=""
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="UnknownId" />
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraininitProfile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:paddingVertical="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/profile_profileText">
+
+
+        <LinearLayout
+            android:id="@+id/linearProfile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+
+
+            android:orientation="vertical"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/imageProfile"
+                android:layout_width="65dp"
+                android:layout_height="65dp"
+                android:layout_gravity="start"
+                app:layout_constraintEnd_toEndOf="@+id/profilekullaniciadi"
+                app:layout_constraintStart_toStartOf="@+id/profilekullaniciadi"
+                app:layout_constraintTop_toTopOf="parent">
+
+
+            </de.hdodenhof.circleimageview.CircleImageView>
+
+
+            <ImageButton
+                android:id="@+id/removeProfile"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="end"
+                android:layout_marginTop="-12dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:clickable="true"
+                android:focusable="true"
+                android:src="@drawable/remove_profile"
+                android:tint="@color/darkeyGray"
+                app:layout_constraintBottom_toBottomOf="@+id/imageProfile"
+                app:layout_constraintStart_toEndOf="@+id/imageProfile"
+                app:layout_constraintTop_toBottomOf="@+id/imageProfile"
+                tools:ignore="UseAppTint" />
+
+
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/profilekullaniciadi"
+            style="@style/TEXT"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLength="20"
+            android:ellipsize="end"
+            android:text=""
+            android:textAlignment="center"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearProfile" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/profile_sizes_constrait"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:paddingHorizontal="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/linearProfile"
+            app:layout_constraintTop_toTopOf="@+id/linearProfile">
+
+            <LinearLayout
+                android:id="@+id/linearLayoutPost"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="30dp"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/linearLayoutAnlikDüsünce"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="UnknownId">
+
+                <TextView
+                    android:id="@+id/profile_post_size"
+                    style="@style/TEXT"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text=""
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/profile_post_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center"
+                    android:text=""
+                    android:textColor="@color/darkeyGray"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/linearLayoutAnlikDüsünce"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="MissingConstraints">
+
+                <TextView
+                    android:id="@+id/profile_anlikdüsünce_size"
+                    style="@style/TEXT"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text=""
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/profile_anlikdüsünce_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text=""
+                    android:textColor="@color/darkeyGray"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/linearLayoutYorum"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+
+                android:layout_marginStart="35dp"
+                android:layout_marginEnd="30dp"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/linearLayoutAnlikDüsünce"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0"
+                tools:ignore="MissingConstraints">
+
+                <TextView
+                    android:id="@+id/profile_yorum_size"
+                    style="@style/TEXT"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text=""
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/profile_yorum_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:gravity="start"
+                    android:ellipsize="end"
+                    android:text=""
+                    android:textColor="@color/darkeyGray"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+        <LinearLayout
+            android:id="@+id/linearBiograhyLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="25dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingHorizontal="5dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/profilekullaniciadi">
+
+
+            />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+
+                android:paddingHorizontal="5dp">
+
+                <TextView
+                    android:id="@+id/biyografi"
+                    style="@style/DRAWABLE_TINT"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:drawableStart="@drawable/biography_ico"
+                    android:gravity="center"
+                    android:text=""
+                    android:textColor="@color/secilenAcikRenk"
+                    android:textSize="13sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/katilmaTarihi"
+                    style="@style/TEXT"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_margin="3dp"
+                    android:text=""
+                    android:textSize="10sp"
+                    android:textStyle="italic"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/profilebiyografi"
+                    style="@style/TEXT"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:text=""
+                    android:textSize="11sp"
+                    android:textStyle="italic"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constrainButtonLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:paddingHorizontal="5dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearBiograhyLayout">
+
+            <View
+                android:id="@+id/view4"
+                android:layout_width="1dp"
+                android:layout_height="1dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/düzenle"
+                style="@android:style/Widget.Button"
+                android:layout_width="100dp"
+                android:layout_height="33dp"
+                android:layout_marginStart="40dp"
+                android:layout_marginEnd="40dp"
+                android:background="@drawable/purple_background"
+                android:onClick="düzenle"
+                android:text=""
+                android:textAlignment="center"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textSize="7sp"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/view4"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="MissingConstraints"></Button>
+
+            <Button
+                android:id="@+id/cıkısButton"
+                style="@android:style/Widget.Button"
+                android:layout_width="100dp"
+                android:layout_height="33dp"
+                android:layout_marginStart="40dp"
+                android:layout_marginEnd="40dp"
+                android:background="@drawable/purple_background"
+                android:text=""
+                android:textColor="@color/white"
+                android:textSize="7sp"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/view4"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="MissingConstraints"></Button>
+
+            <Button
+                android:id="@+id/sohbetButton"
+                style="@android:style/Widget.Button"
+                android:layout_width="100dp"
+                android:layout_height="33dp"
+                android:layout_marginStart="40dp"
+                android:layout_marginEnd="40dp"
+                android:background="@drawable/purple_background"
+                android:onClick="sohbetButton"
+                android:text=""
+                android:visibility="gone"
+                android:textAlignment="center"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textSize="7sp"
+                app:layout_constraintBottom_toBottomOf="@+id/düzenle"
+                app:layout_constraintEnd_toStartOf="@+id/view4"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <Button
+                android:id="@+id/profileArkadasEkle"
+                style="@android:style/Widget.Button"
+                android:layout_width="100dp"
+                android:layout_height="33dp"
+                android:layout_marginStart="40dp"
+                android:layout_marginEnd="40dp"
+                android:background="@drawable/purple_background"
+                android:onClick="arkadasEkle"
+                android:padding="5dp"
+                android:text=""
+                android:visibility="gone"
+                android:textAlignment="center"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textSize="7sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/view4"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/arkcikar"
+                style="@android:style/Widget.Button"
+                android:layout_width="100dp"
+                android:layout_height="33dp"
+                android:layout_marginStart="40dp"
+                android:layout_marginEnd="40dp"
+                android:background="@drawable/purple_background"
+                android:onClick="arkcikar"
+                android:padding="5dp"
+                android:text=""
+                android:textAlignment="center"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textSize="7sp"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/view4"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <Button
+                android:id="@+id/arkadasİstegiİptalEt"
+                style="@android:style/Widget.Button"
+                android:layout_width="100dp"
+                android:layout_height="33dp"
+                android:layout_marginStart="40dp"
+                android:layout_marginEnd="40dp"
+                android:background="@drawable/purple_background"
+                android:onClick="istegiİptalEt"
+                android:padding="5dp"
+                android:textAlignment="center"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textSize="7sp"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/view4"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/profile_tablayout"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        app:layout_constraintBottom_toTopOf="@+id/profile_viewpager"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraininitProfile"
+        tools:ignore="UnknownId">
+
+    </com.google.android.material.tabs.TabLayout>
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/profile_viewpager"
+        style="@style/PreviewBackgroundTint"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+
+
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+</LinearLayout>

@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    style="@style/SCREEN"
+    tools:context="com.app.kutaykerem.productdiscovery.Pages.DuzenleFragment">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/duzenle_geri"
+            style="@style/ICON_TINT"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
+            android:focusable="true"
+            android:src="@drawable/ic_back"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/edit_profile_text"
+            style="@style/TEXT"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            android:text=""
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/duzenle_geri"
+            app:layout_constraintTop_toBottomOf="@+id/duzenle_geri" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="20dp"
+        android:padding="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout6">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/imageProfile"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_gravity="center"
+            android:src="@drawable/sh"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/profile_text"
+            style="@style/TEXT"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text=""
+            android:textColor="@color/darkeyGray"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/imageProfile"
+            app:layout_constraintStart_toStartOf="@+id/imageProfile"
+            app:layout_constraintTop_toBottomOf="@+id/imageProfile" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout7"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+
+        android:paddingHorizontal="10dp"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout5">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints">
+
+            <TextView
+                android:id="@+id/select_language_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="@color/secilmeyenRenk"
+                android:textStyle="bold"
+
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/dark_Text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:text=""
+                android:textColor="@color/secilmeyenRenk"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <Switch
+                android:id="@+id/switchDuzenle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="20dp"
+                android:gravity="start"
+                android:text=""
+                android:textColor="@color/secilenRenk"
+                android:textColorHighlight="@color/secilenRenk"
+                android:thumbTint="@color/secilenRenk"
+                android:trackTint="@color/darkeyGray"
+
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/dark_Text"
+                tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+            <Button
+                android:id="@+id/turkce"
+                android:layout_width="80dp"
+                android:layout_height="29dp"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/purple_background"
+                android:text="Turkish"
+                android:textColor="@color/white"
+                android:textSize="8sp"
+                android:textStyle="bold"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="@+id/ingilizce"
+                app:layout_constraintEnd_toStartOf="@+id/ingilizce"
+                app:layout_constraintTop_toTopOf="@+id/ingilizce" />
+
+            <Button
+                android:id="@+id/ingilizce"
+                android:layout_width="80dp"
+                android:layout_height="29dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/purple_background"
+                android:text="English"
+                android:textColor="@color/white"
+                android:textSize="8sp"
+                android:textStyle="bold"
+
+                android:visibility="gone"
+                app:layout_constraintEnd_toStartOf="@+id/seceneklerdil"
+                app:layout_constraintTop_toBottomOf="@+id/select_language_text"
+                tools:ignore="MissingConstraints" />
+            />
+
+            <ImageView
+                android:id="@+id/seceneklerdil"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginTop="5dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:clickable="true"
+                android:focusable="true"
+                android:tint="@color/secilenRenk"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/select_language_text"
+                app:srcCompat="@drawable/language_ico"
+                tools:ignore="MissingConstraints,UnknownId,UseAppTint" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingHorizontal="5dp"
+
+        android:paddingVertical="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout7">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:elevation="10dp"
+            android:orientation="vertical"
+            android:padding="5dp">
+
+            <TextView
+                android:id="@+id/duzenle_username_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:text=""
+                android:textColor="@color/secilmeyenRenk"
+                android:textStyle="bold" />
+
+
+            <EditText
+                android:id="@+id/duzenleEditTextKullaniciAdi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:ems="10"
+                android:hint=""
+                android:inputType="textPersonName"
+                android:paddingHorizontal="5dp"
+                android:textColor="@color/car_ui_text_color_hint"
+                android:theme="@style/CustomEditTextStyle" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="5dp">
+
+            <TextView
+                android:id="@+id/duzenle_email_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:text=""
+                android:textColor="@color/secilmeyenRenk"
+                android:textStyle="bold" />
+
+
+            <EditText
+
+                android:id="@+id/duzenleeposta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:drawableEnd="@drawable/mail_ico"
+                android:drawableTint="@color/darkeyGray"
+                android:editable="false"
+                android:focusable="false"
+                android:paddingStart="5dp"
+                android:paddingEnd="10dp"
+                android:text=""
+                android:textColor="@color/car_ui_text_color_hint"
+                android:textSize="18sp"
+                android:theme="@style/CustomEditTextStyle" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="5dp">
+
+            <TextView
+                android:id="@+id/duzenle_biyografi_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:text=""
+                android:textColor="@color/secilmeyenRenk"
+                android:textStyle="bold" />
+
+
+            <EditText
+
+                android:id="@+id/editTextBiyografi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:drawableEnd="@drawable/biography_ico"
+                android:drawableTint="@color/darkeyGray"
+                android:maxLength="700"
+                android:overScrollMode="always"
+                android:paddingStart="5dp"
+                android:paddingEnd="10dp"
+                android:scrollbarStyle="insideInset"
+                android:scrollbars="vertical"
+                android:scrollHorizontally="false"
+                android:textColor="@color/car_ui_text_color_hint"
+                android:textSize="15sp"
+                android:theme="@style/CustomEditTextStyle"
+                tools:ignore="ExtraText" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/kaydetButton"
+        android:layout_width="65dp"
+        android:layout_height="45dp"
+        android:layout_gravity="end"
+        android:layout_marginEnd="35dp"
+        android:layout_marginBottom="65dp"
+        android:background="@drawable/purple_background"
+        android:gravity="center"
+        android:onClick="kaydet"
+        android:src="@drawable/tic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:tint="@color/white"
+        tools:ignore="UseAppTint" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

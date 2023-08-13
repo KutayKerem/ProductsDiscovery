@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:title=""
+        android:id="@+id/anaSayfa"
+        android:icon="@drawable/anasayfaico"
+
+
+
+        ></item>
+    <item android:title=""
+        android:icon="@drawable/discovery"
+        android:id="@+id/Kesfet"
+
+        ></item>
+
+
+        <item android:title=""
+            android:icon="@drawable/friend"
+            android:id="@+id/Arkadaslar"
+
+            ></item>
+
+
+    <item android:title=""
+        android:icon="@drawable/bildirim"
+        android:id="@+id/Bildirimler">
+    </item>
+
+
+        <item android:title=""
+            android:icon="@drawable/profile"
+        android:id="@+id/Profile"
+
+    ></item>
+
+
+
+</menu>

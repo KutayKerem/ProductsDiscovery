@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+	<!-- frame_1 styles -->
+
+	<style name="AppTheme" parent="Theme.AppCompat.DayNight.NoActionBar">
+		<item name="colorPrimary">@color/colorPrimary</item>
+		<item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+		<item name="colorAccent">@color/colorAccent</item>
+		<item name="android:statusBarColor" tools:targetApi="l">@android:color/transparent</item>
+
+	</style>
+	<style name="AppTheme_Light" parent="Theme.AppCompat.Light">
+		<!-- Açık temayı belirleyen diğer özellikler -->
+	</style>
+	<style name="AppTheme_Dark" parent="Theme.AppCompat.DayNight">
+		<!-- Açık temayı belirleyen diğer özellikler -->
+	</style>
+
+	<style name="CustomSheetTheme" parent="Theme.Design.BottomSheetDialog">
+		<item name="bottomSheetStyle">@style/CustomTrans</item>
+	</style>
+
+	<style name="CustomTrans" parent="Widget.Design.BottomSheet.Modal">
+		<item name="android:background">@android:color/transparent</item>
+	</style>
+
+	<style name="CustomEditTextStyle" parent="Widget.AppCompat.EditText">
+		<item name="colorControlNormal">@color/car_ui_text_color_hint</item> // Seçilmediğindeki çizgi rengi
+		<item name="colorControlActivated">@color/secilenRenk</item> // Seçildiğindeki çizgi rengi ve imlec rengi
+	</style>
+
+	<style name="CustomTextInputLayoutStyle" parent="Widget.Design.TextInputLayout">
+		<item name="colorControlNormal">@color/car_ui_text_color_hint</item> // Seçilmediğindeki çizgi rengi
+		<item name="colorControlActivated">@color/secilenRenk</item> // Seçildiğindeki çizgi rengi ve imlec rengi
+	</style>
+</resources>

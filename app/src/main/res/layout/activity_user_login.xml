@@ -1,0 +1,219 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:fitsSystemWindows="true"
+    style="@style/SCREEN"
+    android:layout_height="match_parent">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/animationView"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginTop="20dp"
+                android:layout_gravity="center"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:lottie_autoPlay="true"
+                app:lottie_loop="true"
+                app:lottie_rawRes="@raw/products_animate"
+                tools:ignore="MissingConstraints" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:gravity="center_horizontal">
+
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Product "
+                    android:textColor="#707070"
+                    android:textSize="30sp"
+                    android:textStyle="normal"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textView4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Discovery"
+                    android:textColor="@color/secilenRenk"
+                    android:textSize="30sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.0" />
+            </LinearLayout>
+
+
+
+            <EditText
+                android:id="@+id/email"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:ems="10"
+                android:layout_marginEnd="32dp"
+                android:layout_marginTop="32dp"
+                android:layout_marginStart="32dp"
+                android:hint="Email"
+                android:textColorHint="#858585"
+                android:textColor="@color/secilmeyenRenk"
+                android:padding="10dp"
+                android:textSize="16sp"
+                android:theme="@style/CustomEditTextStyle"
+                android:inputType="textPersonName"
+                android:background="@drawable/grey_bcakground" />
+
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginEnd="32dp"
+                android:layout_marginTop="32dp"
+                android:layout_marginStart="32dp"
+                android:textColorHint="#858585"
+                app:passwordToggleEnabled="true"
+                android:textAlignment="center"
+                app:hintEnabled="false"
+                android:theme="@style/CustomTextInputLayoutStyle"
+                app:passwordToggleTint="@color/secilmeyenRenk"
+                android:background="@drawable/grey_bcakground"
+                >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/sifre"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:textSize="16sp"
+                    android:background="@null"
+                    android:textColor="@color/secilmeyenRenk"
+                    android:hint="Password"
+                    android:textColorHint="#858585"
+                    android:inputType="textPassword"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <Button
+
+                style="@android:style/Widget.Button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Login"
+                android:background="@drawable/purple_background"
+                android:textSize="23sp"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:onClick="giris"
+                android:layout_marginStart="32dp"
+                android:layout_marginEnd="32dp"
+                android:layout_marginTop="32dp"/>
+
+            <TextView
+                android:id="@+id/parolayenile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="forgetten password?"
+                android:textColor="@color/secilenRenk"
+                android:textAlignment="viewEnd"
+                android:layout_marginEnd="32dp"
+                android:onClick="parolayenile"
+
+                android:textStyle="bold"
+                android:layout_marginTop="16dp"
+                android:textSize="16sp"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginEnd="32dp"
+                android:layout_marginBottom="16dp"
+                android:background="#707070"
+                android:layout_marginTop="32dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="32dp"
+                android:orientation="horizontal">
+
+                <Button
+                    style="@android:style/Widget.Button"
+                    android:layout_width="0dp"
+                    android:id="@+id/googlegiris"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="16dp"
+                    android:layout_weight="0.5"
+                    android:background="@drawable/grey_bcakground"
+                    android:drawableStart="@drawable/google"
+                    android:drawablePadding="10dp"
+                    android:onClick="googlegiris"
+                    android:clickable="true"
+                    android:textSize="10sp"
+                    android:padding="10dp"
+                    android:text="Sign in with Google"
+                    android:textColor="@color/secilmeyenRenk"
+                    android:textStyle="italic" />
+
+
+                <Button
+                    android:id="@+id/facebookgiris"
+                    style="@android:style/Widget.Button"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_weight="0.5"
+                    android:background="@drawable/grey_bcakground"
+                    android:drawableStart="@drawable/facebook"
+                    android:onClick="facebookgiris"
+                    android:text="Sign in with Facebook"
+                    android:padding="7dp"
+                    android:textSize="10sp"
+                    android:textColor="@color/secilmeyenRenk"
+                    android:textStyle="italic" />
+
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="32dp"
+                android:onClick="kayıt"
+                android:textStyle="bold"
+                android:text="Don't have an account? Signup"
+                android:textAlignment="center"
+                android:textColor="@color/secilenRenk"
+                android:textSize="17sp"
+                tools:ignore="KeyboardInaccessibleWidget" />
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

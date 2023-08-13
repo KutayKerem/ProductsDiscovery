@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    style="@style/SCREEN"
+
+    android:layout_marginTop="100dp"
+    android:theme="@style/Theme.ProductDiscovery"
+
+    >
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_margin="10dp"
+
+        android:background="@drawable/back_tabs">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/select"
+                android:layout_weight="1"
+                android:text=""
+                android:background="@drawable/back_select"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text=""
+                />
+
+
+
+        </LinearLayout>
+
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/item1"
+                android:layout_weight="1"
+                android:text=""
+                android:textColor="@color/white"
+                android:gravity="center"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:id="@+id/item2"
+                android:text=""
+                android:gravity="center"
+                android:textColor="@color/black"
+                />
+
+
+
+        </LinearLayout>
+
+
+
+    </FrameLayout>
+
+</LinearLayout>

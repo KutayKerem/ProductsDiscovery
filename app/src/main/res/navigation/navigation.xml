@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/homeFragmentBottomNav">
+
+    <fragment
+        android:id="@+id/anasayfaFragment"
+        android:name="com.app.kutaykerem.productdiscovery.Pages.AnasayfaFragment"
+        android:label="fragment_anasayfa"
+        tools:layout="@layout/fragment_anasayfa" >
+
+    </fragment>
+    <fragment
+        android:id="@+id/bildirimlerFragment"
+        android:name="com.app.kutaykerem.productdiscovery.Pages.BildirimlerFragment"
+        android:label="fragment_bildirimler"
+        tools:layout="@layout/fragment_bildirimler" />
+
+    <fragment
+        android:id="@+id/arkadaslarListesiFragment"
+        android:name="com.app.kutaykerem.productdiscovery.Pages.ArkadaslarListesiFragment"
+        android:label="fragment_arkadaslar_listesi"
+        tools:layout="@layout/fragment_arkadaslar_listesi">
+        <action
+            android:id="@+id/action_arkadaslarListesiFragment_to_sohbetlerFragment"
+            app:destination="@id/sohbetlerFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/kullaniciProfileFragment"
+        android:name="com.app.kutaykerem.productdiscovery.Pages.KullaniciProfileFragment"
+        android:label="fragment_kullanici_profile"
+        tools:layout="@layout/fragment_kullanici_profile" >
+        <argument
+            android:name="gonderen"
+            app:argType="string"
+            android:defaultValue="null" />
+        <action
+            android:id="@+id/action_kullaniciProfileFragment_self"
+            app:destination="@id/kullaniciProfileFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/duzenleFragment"
+        android:name="com.app.kutaykerem.productdiscovery.Pages.DuzenleFragment"
+        android:label="fragment_duzenle"
+        tools:layout="@layout/fragment_duzenle" >
+        <action
+            android:id="@+id/action_duzenleFragment_self"
+            app:destination="@id/duzenleFragment" />
+        <action
+            android:id="@+id/action_duzenleFragment_to_homeFragmentBottomNav"
+            app:destination="@id/homeFragmentBottomNav" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/sohbetlerFragment"
+        android:name="com.app.kutaykerem.productdiscovery.Pages.SohbetlerFragment"
+        android:label="fragment_sohbetler"
+        tools:layout="@layout/fragment_sohbetler" >
+        <argument
+            android:name="kullaniciId"
+            app:argType="string"
+            android:defaultValue="null" />
+        <action
+            android:id="@+id/action_sohbetlerFragment_self"
+            app:destination="@id/sohbetlerFragment" />
+        <action
+            android:id="@+id/action_sohbetlerFragment_to_imageToScreenFragment"
+            app:destination="@id/imageToScreenFragment" />
+        <action
+            android:id="@+id/action_sohbetlerFragment_to_homeFragmentBottomNav"
+            app:destination="@id/homeFragmentBottomNav" />
+    </fragment>
+    <activity
+        android:id="@+id/userLogin"
+        android:name="com.app.kutaykerem.productdiscovery.Sign.UserLogin"
+        android:label="activity_user_login"
+        tools:layout="@layout/activity_user_login" />
+    <fragment
+        android:id="@+id/yorumlarFragment"
+        android:name="com.app.kutaykerem.productdiscovery.Pages.YorumlarFragment"
+        android:label="fragment_yorumlar"
+        tools:layout="@layout/fragment_yorumlar" >
+        <argument
+            android:name="gonderiId"
+            app:argType="string" />
+
+        <argument
+            android:name="from_where"
+            app:argType="string"
+            android:defaultValue="kesfet" />
+        <argument
+            android:name="gelenId"
+            app:argType="string"
+            android:defaultValue="null" />
+        <argument
+            android:name="arananParca"
+            app:argType="string"
+            android:defaultValue="null" />
+        <action
+            android:id="@+id/action_yorumlarFragment_self"
+            app:destination="@id/yorumlarFragment" />
+        <action
+            android:id="@+id/action_yorumlarFragment_to_homeFragmentBottomNav"
+            app:enterAnim="@anim/slide_right"
+            app:exitAnim="@anim/slide_right"
+            app:destination="@id/homeFragmentBottomNav" />
+        <argument
+            android:name="silinen"
+            app:argType="boolean"
+            android:defaultValue="false" />
+
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/addPostFirstStage"
+        android:name="com.app.kutaykerem.productdiscovery.Pages.AddPostFirstStage"
+        android:label="addPostFirstStage"
+        tools:layout="@layout/add_post_first_stage" >
+        <argument
+            android:name="aranan_parca"
+            android:defaultValue="null" />
+        <action
+            android:id="@+id/action_addPostFirstStage_to_homeFragmentBottomNav"
+
+
+            app:destination="@id/homeFragmentBottomNav" />
+        <action
+            android:id="@+id/action_addPostFirstStage_to_addPostSecondStage"
+            app:enterAnim="@anim/slide_right"
+            app:exitAnim="@anim/slide_right"
+            app:popEnterAnim="@anim/slide_right"
+            app:popExitAnim="@anim/slide_right"
+            app:destination="@id/addPostSecondStage" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/imageToScreenFragment"
+        android:name="com.app.kutaykerem.productdiscovery.Pages.ImageToScreenFragment"
+        android:label="fragment_image_to_screen"
+        tools:layout="@layout/fragment_image_to_screen" >
+        <argument
+            android:name="url"
+            app:argType="string" />
+        <argument
+            android:name="from_where"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_imageToScreenFragment_to_sohbetlerFragment"
+            app:destination="@id/sohbetlerFragment" />
+        <argument
+            android:name="hedef_Id"
+            android:defaultValue="null"
+            app:argType="string" />
+        <argument
+            android:name="arananParca"
+            app:argType="string"
+            android:defaultValue="null" />
+        <action
+            android:id="@+id/action_imageToScreenFragment_to_discovery"
+            app:destination="@id/discovery" />
+        <action
+            android:id="@+id/action_imageToScreenFragment_to_homeFragmentBottomNav"
+            app:destination="@id/homeFragmentBottomNav" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/discovery"
+        android:name="com.app.kutaykerem.productdiscovery.Pages.Discovery"
+        android:label="fragment_discovery"
+        tools:layout="@layout/fragment_discovery" >
+        <argument
+            android:name="arananParca"
+            app:argType="string"
+            android:defaultValue="null" />
+        <argument
+            android:name="position"
+            app:argType="integer"
+            android:defaultValue="-1" />
+        <action
+            android:id="@+id/action_discovery_to_homeFragmentBottomNav"
+            app:destination="@id/homeFragmentBottomNav" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/homeFragmentBottomNav"
+        android:name="com.app.kutaykerem.productdiscovery.Pages.HomeFragmentBottomNav"
+        android:label="fragment_home_bottom_nav"
+        tools:layout="@layout/fragment_home_bottom_nav" >
+        <action
+            android:id="@+id/action_homeFragmentBottomNav_to_yorumlarFragment"
+            app:enterAnim="@anim/slide_left"
+            app:exitAnim="@anim/slide_left"
+            app:destination="@id/yorumlarFragment" />
+        <action
+            android:id="@+id/action_homeFragmentBottomNav_to_imageToScreenFragment"
+            app:destination="@id/imageToScreenFragment" />
+        <action
+            android:id="@+id/action_homeFragmentBottomNav_to_sohbetlerFragment"
+            app:destination="@id/sohbetlerFragment" />
+        <action
+            android:id="@+id/action_homeFragmentBottomNav_to_duzenleFragment"
+            app:destination="@id/duzenleFragment" />
+        <action
+            android:id="@+id/action_homeFragmentBottomNav_to_userLogin"
+            app:destination="@id/userLogin" />
+        <action
+            android:id="@+id/action_homeFragmentBottomNav_to_discovery"
+            app:destination="@id/discovery" />
+        <action
+            android:id="@+id/action_homeFragmentBottomNav_self"
+            app:destination="@id/homeFragmentBottomNav" />
+        <argument
+            android:name="arananParca"
+            app:argType="string"
+            android:defaultValue="null" />
+        <argument
+            android:name="pos"
+            app:argType="integer"
+            android:defaultValue="0" />
+        <argument
+            android:name="gonderen"
+            app:argType="string"
+            android:defaultValue="null" />
+        <argument
+            android:name="discovery_tab_pos"
+            app:argType="integer"
+            android:defaultValue="0" />
+        <action
+            android:id="@+id/action_homeFragmentBottomNav_to_feedbackFragment"
+            app:enterAnim="@anim/bottom_nav"
+            app:exitAnim="@anim/bottom_nav"
+            app:popEnterAnim="@anim/bottom_nav"
+            app:popExitAnim="@anim/bottom_nav"
+            app:destination="@id/feedbackFragment" />
+        <action
+            android:id="@+id/action_homeFragmentBottomNav_to_addPostFirstStage"
+            app:destination="@id/addPostFirstStage" />
+        <action
+            android:id="@+id/action_homeFragmentBottomNav_to_productsFragment"
+            app:destination="@id/productsFragment" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/feedbackFragment"
+        android:name="com.app.kutaykerem.productdiscovery.Pages.SettingsFragment"
+        android:label="fragment_feedback"
+        tools:layout="@layout/fragment_feedback" >
+        <action
+            android:id="@+id/action_feedbackFragment_to_homeFragmentBottomNav"
+            app:destination="@id/homeFragmentBottomNav" />
+        <argument
+            android:name="arananParca"
+            app:argType="string"
+            android:defaultValue="null" />
+        <action
+            android:id="@+id/action_feedbackFragment_to_gizlilikPolitikasiFragment"
+            app:destination="@id/gizlilikPolitikasiFragment" />
+
+
+    </fragment>
+    <fragment
+        android:id="@+id/gizlilikPolitikasiFragment"
+        android:name="com.app.kutaykerem.productdiscovery.Pages.GizlilikPolitikasiFragment"
+        android:label="fragment_gizlilik_politikasi"
+        tools:layout="@layout/fragment_gizlilik_politikasi" >
+        <action
+            android:id="@+id/action_gizlilikPolitikasiFragment_to_feedbackFragment"
+            app:destination="@id/feedbackFragment" />
+        <argument
+            android:name="arananParca"
+            app:argType="string"
+            android:defaultValue="null" />
+        <argument
+            android:name="dil"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/addPostSecondStage"
+        android:name="com.app.kutaykerem.productdiscovery.Pages.AddPostSecondStage"
+        android:label="AddPostSecondStage" >
+        <action
+            android:id="@+id/action_addPostSecondStage_to_addPostFirstStage"
+            app:enterAnim="@anim/slide_left"
+            app:exitAnim="@anim/slide_left"
+            app:popEnterAnim="@anim/slide_left"
+            app:popExitAnim="@anim/slide_left"
+            app:destination="@id/addPostFirstStage" />
+        <action
+            android:id="@+id/action_addPostSecondStage_to_homeFragmentBottomNav"
+            app:destination="@id/homeFragmentBottomNav" />
+        <argument
+            android:name="parcaAdi"
+            app:argType="string" />
+        <argument
+            android:name="sonParcaModeli"
+            app:argType="string" />
+        <argument
+            android:name="aciklama"
+            app:argType="string" />
+        <argument
+            android:name="tur"
+            app:argType="string" />
+        <argument
+            android:name="dil"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/productsFragment"
+        android:name="com.app.kutaykerem.productdiscovery.Parts.ProductsFragment"
+        android:label="fragment_products"
+        tools:layout="@layout/fragment_products" >
+        <action
+            android:id="@+id/action_productsFragment_to_homeFragmentBottomNav"
+            app:destination="@id/homeFragmentBottomNav" />
+        <argument
+            android:name="productsName"
+            app:argType="string" />
+    </fragment>
+</navigation>

@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:id="@+id/add_post_first_view"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:theme="@style/Theme.THEMETextInputLayout"
+    tools:context="com.app.kutaykerem.productdiscovery.Pages.AddPostFirstStage"
+    >
+
+    <ImageView
+        android:id="@+id/addPost_first_geri"
+        android:layout_width="44dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="15dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:clickable="true"
+        style="@style/ICON_TINT"
+        android:focusable="true"
+        android:src="@drawable/ic_back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+
+    <TextView
+        android:id="@+id/add_post_first_firstText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="30dp"
+        android:text=""
+        android:textSize="23sp"
+        android:textStyle="bold"
+        style="@style/TEXT"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/addPost_first_geri" />
+
+
+
+
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/add_post_first_textInputLayout_parcaAdi"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:layout_marginHorizontal="15dp"
+        android:layout_marginTop="30dp"
+        app:boxStrokeColor="@color/secilenRenk"
+        android:theme="@style/CustomTextInputLayoutStyle"
+        app:endIconTint="@color/secilenRenk"
+        app:endIconTintMode="src_atop"
+        app:hintTextColor="@color/darkeyGray"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/add_post_first_firstText"
+        tools:ignore="MissingConstraints">
+
+        <AutoCompleteTextView
+            android:id="@+id/add_post_first_auto_complete_text_parcaAdi"
+            style="@style/TEXT"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:importantForAutofill="no"
+
+            android:inputType="none"
+            android:maxLines="1"
+
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+
+
+
+
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/add_post_first_textInputLayout_parcaModeli"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        app:boxStrokeColor="@color/secilenRenk"
+        app:endIconTint="@color/secilenRenk"
+        app:endIconTintMode="src_atop"
+        android:theme="@style/CustomTextInputLayoutStyle"
+        app:hintTextColor="@color/darkeyGray"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/add_post_first_textInputLayout_parcaAdi"
+        tools:ignore="MissingConstraints">
+
+        <AutoCompleteTextView
+            android:id="@+id/add_post_first_auto_complete_text_parcaModeli"
+            style="@style/TEXT"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:importantForAutofill="no"
+            android:inputType="none"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:ellipsize="end"
+
+            tools:ignore="DuplicateIds" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/add_post_first_textInputLayout_ayrıParca"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="15dp"
+        android:layout_marginVertical="15dp"
+        app:boxStrokeColor="@color/secilenRenk"
+        app:endIconTint="@color/secilenRenk"
+        app:endIconTintMode="src_atop"
+        app:hintTextColor="@color/darkeyGray"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:theme="@style/CustomTextInputLayoutStyle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/add_post_first_textInputLayout_parcaModeli">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/add_post_first_textInputEditText_ayrıParca"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="top"
+            android:lines="1"
+            android:overScrollMode="always"
+            android:theme="@style/CustomEditTextStyle"
+            android:scrollbarStyle="insideInset"
+            android:scrollbars="vertical"
+            android:scrollHorizontally="false"/>
+
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/add_post_first_textInputLayout_aciklama"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="15dp"
+        android:layout_marginVertical="15dp"
+        android:hint=""
+        app:boxStrokeColor="@color/secilenRenk"
+        app:endIconTint="@color/secilenRenk"
+        app:endIconTintMode="src_atop"
+        app:hintTextColor="@color/darkeyGray"
+        android:theme="@style/CustomTextInputLayoutStyle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/add_post_first_textInputLayout_ayrıParca">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/add_post_first_textInputEditText_aciklama"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="top"
+            android:lines="6"
+            android:theme="@style/CustomEditTextStyle"
+            android:overScrollMode="always"
+            android:scrollbarStyle="insideInset"
+            android:scrollbars="vertical"
+            android:scrollHorizontally="false" />
+
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Switch
+        android:id="@+id/add_post_tür_switch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:padding="10dp"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="@color/ButtomRenk"
+        android:outlineAmbientShadowColor="@color/ButtomRenk"
+        android:outlineSpotShadowColor="@color/ButtomRenk"
+        android:shadowColor="@color/ButtomRenk"
+        android:textColor="@color/secilenRenk"
+        android:textColorHighlight="@color/secilenRenk"
+        android:thumbTint="@color/secilenRenk"
+        android:trackTint="@color/darkeyGray"
+        android:text="@string/androidSwitch"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/add_post_first_textInputLayout_aciklama"
+        tools:ignore="UnusedAttribute,UseSwitchCompatOrMaterialXml" />
+
+
+
+
+
+    <Button
+        android:id="@+id/add_post_first_devam"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="35dp"
+        android:layout_marginBottom="65dp"
+        android:background="@drawable/purple_background"
+        android:onClick="eklebutonnu"
+        android:text=""
+        android:drawableEnd="@drawable/small_arrow"
+        android:paddingEnd="10dp"
+        android:layout_gravity="bottom|end"
+        android:textColor="@color/white"
+        android:textSize="9sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:ignore="TouchTargetSizeCheck">
+
+    </Button>
+
+
+    <ProgressBar
+        android:id="@+id/add_post_firstProgressBar"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:indeterminate="true"
+        android:indeterminateDuration="100"
+        android:indeterminateTint="@color/secilenAcikRenk"
+        android:progress="100"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+
+
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:fitsSystemWindows="true"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/SCREEN"
+    tools:context="com.app.kutaykerem.productdiscovery.Pages.AnasayfaFragment">
+
+
+    <ProgressBar
+        android:id="@+id/anaSayfa_progresBar"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:indeterminate="true"
+        android:indeterminateTint="@color/secilenAcikRenk"
+        android:progress="100"
+        android:indeterminateDuration="100"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+
+
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginHorizontal="5dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/anayasayfa_profile"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_margin="5dp"
+       />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginVertical="5dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/anasayfa_welcome_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="2dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="5dp"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                android:textColor="@color/secilenAcikRenk" />
+
+            <TextView
+                android:id="@+id/anasayfa_username_Text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="2dp"
+                android:maxLength="20"
+                android:ellipsize="end"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="@color/secilenAcikRenk" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/anasayfa_bildrim"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:tint="@color/secilenAcikRenk"
+            android:layout_gravity="center"
+            android:layout_marginEnd="10dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            tools:ignore="UseAppTint" />
+
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/popular"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="25dp"
+        android:text=""
+        android:textColor="@color/secilenAcikRenk"
+        android:textStyle="bold|italic"
+        app:layout_constraintStart_toStartOf="@+id/linearLayout"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+    <LinearLayout
+        android:id="@+id/anasayfa_linerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/popular">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/populer1_cons"
+            android:layout_width="0dp"
+            android:layout_height="70dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="8dp"
+            android:layout_weight="0.5"
+            android:background="@drawable/radius"
+            android:elevation="10dp">
+
+            <TextView
+                android:id="@+id/populer1_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start|center"
+                android:layout_margin="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="20dp"
+                android:text=""
+                android:textColor="@color/secilenRenk"
+                android:textSize="11sp"
+                android:textStyle="bold|italic"
+                app:layout_constraintBottom_toBottomOf="@+id/populer1_image"
+                app:layout_constraintEnd_toStartOf="@+id/populer1_image"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/populer1_image"
+                tools:ignore="MissingConstraints,NotSibling,RtlCompat" />
+
+            <ImageView
+                android:id="@+id/populer1_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="5dp"
+                android:tint="@color/secilenRenk"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/populer1image_32"
+                tools:ignore="DuplicateIds,MissingConstraints,UseAppTint" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/populer2_cons"
+            android:layout_width="0dp"
+            android:layout_height="70dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="32dp"
+            android:layout_weight="0.5"
+            android:background="@drawable/radius"
+            android:elevation="10dp">
+
+            <TextView
+                android:id="@+id/populer2_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start|center"
+                android:layout_margin="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="20dp"
+                android:text=""
+                android:textColor="@color/secilenRenk"
+                android:textSize="11sp"
+                android:textStyle="bold|italic"
+                app:layout_constraintBottom_toBottomOf="@+id/populer2_image"
+                app:layout_constraintEnd_toStartOf="@+id/populer2_image"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/populer2_image"
+                tools:ignore="MissingConstraints,RtlCompat" />
+
+            <ImageView
+                android:id="@+id/populer2_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="5dp"
+                android:layout_marginEnd="8dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:tint="@color/secilenRenk"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/populer2image_32"
+                tools:ignore="MissingConstraints" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+
+
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/anasayfa_linerLayout">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/populer3_cons"
+            android:layout_width="0dp"
+            android:layout_height="70dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="8dp"
+            android:layout_weight="0.5"
+            android:elevation="10dp"
+            android:background="@drawable/radius">
+
+            <TextView
+                android:id="@+id/populer3_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start|center"
+                android:layout_margin="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="20dp"
+                android:text=""
+                android:textColor="@color/secilenRenk"
+                android:textSize="11sp"
+                android:textStyle="bold|italic"
+                app:layout_constraintBottom_toBottomOf="@+id/populer3_image"
+                app:layout_constraintEnd_toStartOf="@+id/populer3_image"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/populer3_image"
+                tools:ignore="MissingConstraints,RtlCompat" />
+
+            <ImageView
+                android:id="@+id/populer3_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="5dp"
+                android:tint="@color/secilenRenk"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/populer3image_32"
+                tools:ignore="MissingConstraints" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/populer4_cons"
+            android:layout_width="0dp"
+            android:layout_height="70dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="32dp"
+            android:layout_weight="0.5"
+            android:elevation="10dp"
+            android:background="@drawable/radius">
+
+            <TextView
+                android:id="@+id/populer4_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start|center"
+                android:layout_margin="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="20dp"
+                android:text=""
+                android:textColor="@color/secilenRenk"
+                android:textSize="11sp"
+                android:textStyle="bold|italic"
+                app:layout_constraintBottom_toBottomOf="@+id/populer4_image"
+                app:layout_constraintEnd_toStartOf="@+id/populer4_image"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/populer4_image"
+                tools:ignore="MissingConstraints,RtlCompat" />
+
+            <ImageView
+                android:id="@+id/populer4_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="5dp"
+                android:layout_marginEnd="8dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:tint="@color/secilenRenk"
+                app:srcCompat="@drawable/populer4image_32"
+                tools:ignore="MissingConstraints" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_anasayfa"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="320dp"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+
+
+
+
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

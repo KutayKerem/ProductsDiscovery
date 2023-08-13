@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/SCREEN"
+    android:fitsSystemWindows="true"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/animationView"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginTop="20dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:lottie_autoPlay="true"
+                app:lottie_loop="true"
+                app:lottie_rawRes="@raw/products_animate"
+                tools:ignore="MissingConstraints" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:gravity="center_horizontal">
+
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#707070"
+                    android:textSize="30sp"
+                    android:text="Product " />
+
+                <TextView
+                    android:id="@+id/textView4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Discovery"
+                    android:textColor="@color/secilenRenk"
+                    android:textSize="30sp"
+                    android:textStyle="bold"/>
+            </LinearLayout>
+
+
+
+            <EditText
+                android:id="@+id/kullaniciadi"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="32dp"
+                android:layout_marginEnd="32dp"
+                android:background="@drawable/grey_bcakground"
+                android:ems="10"
+                android:hint="User name"
+                android:inputType="textPersonName"
+                android:textColor="@color/secilmeyenRenk"
+                android:padding="10dp"
+                android:textColorHint="#858585"
+                android:theme="@style/CustomEditTextStyle"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/mail"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="32dp"
+                android:layout_marginEnd="32dp"
+                android:background="@drawable/grey_bcakground"
+                android:ems="10"
+                android:hint="Email"
+                android:inputType="textPersonName"
+                android:padding="10dp"
+                android:textColor="@color/secilmeyenRenk"
+                android:textColorHint="#858585"
+                android:theme="@style/CustomEditTextStyle"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/sifre"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="32dp"
+                android:layout_marginEnd="32dp"
+                android:background="@drawable/grey_bcakground"
+                android:ems="10"
+                android:textColor="@color/secilmeyenRenk"
+                android:hint="Password"
+                android:inputType="textPassword"
+                android:padding="10dp"
+                android:textColorHint="#858585"
+                android:theme="@style/CustomEditTextStyle"
+                android:textSize="16sp" />
+
+
+            <Button
+                android:id="@+id/kaydol"
+                style="@android:style/Widget.Button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="32dp"
+                android:layout_marginEnd="32dp"
+                android:onClick="kaydol"
+                android:background="@drawable/purple_background"
+                android:text="Signup"
+                android:textColor="#ffffff"
+                android:textSize="23sp"
+                android:textStyle="bold"
+                tools:ignore="InvalidId" />
+
+
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/arkaplan"
+    android:layout_width="match_parent"
+    android:layout_marginBottom="5dp"
+    android:layout_height="wrap_content">
+
+
+    <TextView
+        android:id="@+id/recyclerrow_mesaj_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:padding="10dp"
+        android:text=""
+        style="@style/TEXT"
+        android:textStyle="italic"
+        android:textSize="10sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="DuplicateIds" />
+
+
+    <LinearLayout
+        android:id="@+id/linearMesaj"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="15dp"
+        android:gravity="end"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/recyclerrow_mesaj_time"
+        tools:ignore="MissingConstraints,NotSibling">
+
+        <TextView
+            android:id="@+id/recyclerrow_mesaj_user"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginEnd="4dp"
+            android:background="@drawable/message_background"
+            android:gravity="end"
+            android:padding="10dp"
+            android:focusable="true"
+            android:clickable="true"
+            android:text=""
+            android:textAlignment="textStart"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBaseline_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="RtlCompat" />
+    </LinearLayout>
+
+
+    <ImageView
+        android:id="@+id/sohbetler_resim"
+        android:layout_width="270dp"
+        android:layout_height="270dp"
+        android:layout_marginVertical="15dp"
+        android:layout_marginEnd="5dp"
+        android:scaleType="fitXY"
+        android:focusable="true"
+        android:clickable="true"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/recyclerrow_mesaj_time">
+
+    </ImageView>
+
+    <TextView
+        android:id="@+id/sohbetler_goruldu_resim"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        style="@style/TEXT"
+        android:layout_marginEnd="15dp"
+        android:text=""
+        android:gravity="end"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sohbetler_resim"
+        tools:ignore="DuplicateIds"></TextView>
+
+
+    <ProgressBar
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:indeterminate="true"
+        android:id="@+id/sohbetler_progressbar"
+        android:indeterminateTint="@color/secilenAcikRenk"
+        app:layout_constraintBottom_toBottomOf="@+id/sohbetler_resim"
+        app:layout_constraintEnd_toEndOf="@+id/sohbetler_resim"
+        app:layout_constraintStart_toStartOf="@+id/sohbetler_resim"
+        app:layout_constraintTop_toTopOf="@+id/sohbetler_resim"></ProgressBar>
+
+    <TextView
+        android:id="@+id/sohbetler_goruldu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/TEXT"
+        android:layout_marginEnd="12dp"
+        android:text=""
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearMesaj"></TextView>
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

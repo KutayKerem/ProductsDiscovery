@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <color name="purple_200">#FFFFFFFF</color>
+    <color name="purple_500">#FFFFFFFF</color>
+    <color name="purple_700">#FFFFFFFF</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="whitish">#E1E1E1</color>
+    <color name="ButtomRenk">#015CE5 </color>
+    <color name="secilenRenk">#002D71</color>
+    <color name="secilenAcikRenk">#1A59B8</color>
+    <color name="secilmeyenRenk">#515151</color>
+    <color name="red" tools:ignore="DuplicateDefinition">#C10000</color>
+    <color name="colorPrimaryDark">#5D688A</color>
+    <color name="colorPrimary">#1B1A1C</color>
+    <color name="colorAccent">#FFFFFF</color>
+    <color name="darkeyGray" tools:ignore="DuplicateDefinition">@android:color/darker_gray</color>
+    <color name="colorGreen">#007400</color>
+    <color name="color_blue">#000897</color>
+    <color name="twitter_background_dark">#14171A</color>
+    <color name="twitter_background_los">#15202B</color>
+    <color name="preview_background_los">#0A0F15</color>
+
+</resources>

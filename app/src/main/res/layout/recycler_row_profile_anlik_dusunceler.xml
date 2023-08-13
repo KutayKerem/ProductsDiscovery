@@ -1,0 +1,374 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+
+    style="@style/SCREEN"
+    >
+
+
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constrait_anlikdüsüncelerkesfet"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="10dp"
+        style="@style/SCREEN"
+        android:layout_marginVertical="15dp"
+        android:paddingStart="10dp"
+        android:paddingVertical="5dp"
+        android:paddingEnd="5dp"
+        android:layout_weight="1"
+        tools:ignore="MissingConstraints">
+
+
+        <LinearLayout
+            android:id="@+id/linearLayout6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/recyclerrow_anlıkdüsüncelerProfile"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="5dp"
+
+                 />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:orientation="vertical"
+
+
+                >
+
+
+                <TextView
+                    android:id="@+id/recyclerrow_anlıkdüsüncelerKullanıcıAdı"
+                    style="@style/TEXT"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxLength="35"
+                    android:layout_marginTop="3dp"
+                    android:text=""
+                    android:textSize="14sp"
+
+
+                    />
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:orientation="horizontal"
+
+
+                    >
+
+                    <TextView
+                        android:id="@+id/recyclerrow_anlıkdüsüncelerTarih"
+                        style="@style/TEXT"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_above="@id/kullaniciPaylastigiResim"
+                        android:text=""
+                        android:textAlignment="center"
+                        android:textSize="10sp"
+                        android:textStyle="italic" />
+
+
+                    <ImageView
+                        style="@style/ICON_TINT"
+                        android:layout_width="wrap_content"
+                        android:layout_height="10dp"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="3dp"
+                        android:src="@drawable/world"
+                        tools:ignore="UseAppTint" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+
+
+        <LinearLayout
+            android:id="@+id/linearLayout7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:elevation="10dp"
+            android:orientation="vertical"
+            android:paddingHorizontal="5dp"
+            android:padding="5dp"
+            app:layout_constraintStart_toStartOf="@+id/linearLayout6"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout6">
+
+            <TextView
+                android:id="@+id/recyclerrow_anlıkdüsüncelerParcaAdi"
+                style="@style/TEXT"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:paddingEnd="30dp"
+                android:text=""
+                android:textAlignment="viewStart"
+                android:textSize="16sp"
+                android:textStyle="italic|bold" />
+
+            <TextView
+                android:id="@+id/recyclerrow_anlıkdüsüncelerParcaModeli"
+                style="@style/TEXT"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingEnd="30dp"
+                android:layout_marginBottom="10dp"
+                android:text=""
+
+                android:textAlignment="viewStart"
+                android:textSize="14sp"
+                android:textStyle="italic|bold" />
+
+            <TextView
+                android:id="@+id/recyclerrow_anlıkdüsüncelerAcıklama"
+                style="@style/TEXT"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:paddingEnd="30dp"
+                android:textAlignment="viewStart"
+                android:textSize="15sp"
+                android:textStyle="normal" />
+
+
+        </LinearLayout>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout7">
+
+            <LinearLayout
+                android:id="@+id/linearLayout8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingHorizontal="10dp"
+                android:paddingVertical="5dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                   style="@style/ICON_TINT"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:src="@drawable/like_small"
+
+                    tools:ignore="UseAppTint" />
+
+                <TextView
+                    android:id="@+id/recyclerrow_anlikDusunceler_begeni_sayisi"
+                    style="@style/TEXT"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="10dp"
+                    android:text=""
+
+                    android:textSize="15sp" />
+
+
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/recyclerrow_textViewAnlikDusunceler_yorumlar"
+                style="@style/TEXT"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:paddingHorizontal="10dp"
+                android:paddingVertical="5dp"
+                android:text=""
+                android:textAlignment="center"
+                android:textSize="13sp"
+                android:textStyle="italic"
+                app:layout_constraintBottom_toBottomOf="parent"
+
+
+                app:layout_constraintEnd_toStartOf="@+id/recyclerrow_anlıkdusuncepuanSayisiText"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/recyclerrow_anlıkdusuncepuanSayisiText"
+                style="@style/TEXT"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="5dp"
+                android:gravity="center"
+                android:text=""
+                android:textSize="13sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/recyclerrow_anlıkdusuncepuan"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/recyclerrow_anlıkdusuncepuan"
+                style="@style/TEXT"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:gravity="center"
+                android:text=""
+                android:textSize="13sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="InvalidId" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <View
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#707070"
+            android:layout_marginTop="10dp"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayout"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="10dp" />
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="5dp"
+            app:layout_constraintTop_toBottomOf="@+id/view">
+
+
+            <View
+                android:id="@+id/view2"
+                android:layout_width="1dp"
+                android:layout_height="1dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:visibility="invisible"
+                tools:ignore="MissingConstraints" />
+
+            <LinearLayout
+                android:id="@+id/recyclerrow_anlikDusunceler_begen_linear"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="?attr/selectableItemBackground"
+                android:clickable="true"
+                android:focusable="true"
+                android:orientation="horizontal"
+                android:paddingVertical="5dp"
+                android:gravity="center"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/view2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintWidth_default="spread">
+
+
+                <ImageView
+                    android:id="@+id/recyclerrow_anlikDusunceler_image"
+                    style="@style/ICON_TINT"
+                    android:layout_width="30dp"
+                    android:layout_height="28dp"
+
+
+                    />
+
+                <TextView
+                    android:id="@+id/recyclerrow_anlikDusunceler_begenText"
+                    style="@style/TEXT"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="10dp"
+                    android:text=""
+                    android:textSize="15sp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+
+                android:id="@+id/recyclerrow_anlikDusunceler_yorumlar_linear"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="?attr/selectableItemBackground"
+                android:clickable="true"
+                android:focusable="true"
+                android:orientation="horizontal"
+                android:paddingVertical="5dp"
+                android:gravity="center"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/recyclerrow_anlikDusunceler_begen_linear"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintWidth_default="spread">
+
+
+                <ImageView
+                    style="@style/ICON_TINT"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/comment2"
+
+                    tools:ignore="UseAppTint" />
+
+                <TextView
+                    android:id="@+id/recyclerrow_anlikDusunceler_yorumYapText"
+                    style="@style/TEXT"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="10dp"
+                    android:text=""
+                    android:textSize="15sp" />
+
+
+            </LinearLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+</LinearLayout>

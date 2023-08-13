@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+
+    <!-- Üst kısım için renk -->
+    <solid android:color="@color/twitter_background_los" />
+
+    <!-- Üst kısım için renk -->
+    <gradient
+        android:angle="270"
+        android:centerColor="@color/twitter_background_los"
+        android:startColor="@color/twitter_background_los"
+        android:endColor="@color/twitter_background_los" />
+
+    <!-- Orta kısım için renk -->
+    <gradient
+        android:angle="270"
+        android:centerColor="@color/twitter_background_los"
+        android:startColor="@color/twitter_background_los"
+        android:endColor="@color/twitter_background_los" />
+
+    <!-- Alt kısım için renk -->
+    <gradient
+        android:angle="270"
+        android:centerColor="@color/twitter_background_los"
+        android:startColor="@color/twitter_background_dark"
+        android:endColor="@color/secilmeyenRenk" />
+
+</shape>
