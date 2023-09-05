@@ -80,7 +80,7 @@ public class AddPostSecondStage extends Fragment {
 
     public FragmentAddPostSecondStageBinding binding;
 
-    //   ca-app-pub-1885716495742225/2048389001 : Addmob Interstitial ID
+    //    : Addmob Interstitial ID
 
     /*
    Tests ID:
@@ -167,7 +167,7 @@ public class AddPostSecondStage extends Fragment {
         AdRequest adRequest = new AdRequest.Builder().build();
 
 
-        InterstitialAd.load(requireContext(),"ca-app-pub-1885716495742225/2048389001", adRequest,
+        InterstitialAd.load(requireContext(),"", adRequest,
                 new InterstitialAdLoadCallback() {
                     @SuppressLint("RestrictedApi")
                     @Override
