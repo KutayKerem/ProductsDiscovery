@@ -76,7 +76,7 @@ public class HomeFragmentBottomNav extends Fragment {
 
 
 
-    // ca-app-pub-1885716495742225/9321493922 : Admob homeFragmentBannar ID
+    // : Admob homeFragmentBannar ID
 
     /*
     Tests ID:
